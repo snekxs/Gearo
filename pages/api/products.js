@@ -233,7 +233,7 @@ export default function handler(req, res) {
         brand: "XTEN",
         type: "mousepad",
         image_url:
-          "http://cdn.shopify.com/s/files/1/0506/6627/5008/products/1_e2ab8522-3577-412e-a9b7-9fc10faf5eac_1200x1200.png?v=1666302957",
+          "https://www.maxgaming.com/img/bilder/artiklar/19570.jpg?m=1632310396&w=720",
       },
       {
         id: 30,
@@ -241,7 +241,7 @@ export default function handler(req, res) {
         brand: "XTEN",
         type: "mousepad",
         image_url:
-          "http://cdn.shopify.com/s/files/1/0506/6627/5008/products/1_e2ab8522-3577-412e-a9b7-9fc10faf5eac_1200x1200.png?v=1666302957",
+          "https://xten.jp/assets/img/contents/top/lineup/img--hard.png",
       },
       {
         id: 31,
@@ -249,7 +249,7 @@ export default function handler(req, res) {
         brand: "XTEN",
         type: "mousepad",
         image_url:
-          "http://cdn.shopify.com/s/files/1/0506/6627/5008/products/1_e2ab8522-3577-412e-a9b7-9fc10faf5eac_1200x1200.png?v=1666302957",
+          "https://xten.jp/assets/img/contents/top/lineup/img--gcloth.png?v=0629",
       },
       {
         id: 32,
