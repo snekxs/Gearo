@@ -1,3 +1,3 @@
-Welcome to GearSite `name change still pending`
+Welcome to Gearo `name change still pending`
 
 
