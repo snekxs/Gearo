@@ -1,4 +1,4 @@
-Welcome to GearSite 'name change soon' 
+Welcome to GearSite `name change still pending`
 
 ## Getting Started
 
