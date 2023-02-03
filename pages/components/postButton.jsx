@@ -10,6 +10,9 @@ import { Modal } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import { color } from '@mui/system';
+import Select from 'react-select'
+
 
 
 
@@ -18,8 +21,30 @@ export default function PostButton() {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
+  const [data, setData] = useState([]);
   const handleClose = () => setOpen(false);
+  const [value, setValue] = useState("Red");
 
+  React.useEffect(() => {
+    fetch('http://localhost:3000/api/products')
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+
+
+  const mouseNamesFilter = data.data?.filter((item) => item.type === 'mouse')
+  const mouseNames = mouseNamesFilter?.map((item) => ({ value: item.name, label: item.name }))
+  const mousepadNamesFilter = data.data?.filter((item) => item.type === 'mousepad')
+  const mousepadNames = mousepadNamesFilter?.map((item) => ({ value: item.name, label: item.name }))
+
+
+  
+  
+
+  
+const [isSearchable, setIsSearchable] = useState(true);
+const [isClearable, setIsClearable] = useState(true);
+  
   
 const style = {
   position: 'absolute',
@@ -33,6 +58,29 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]
+
+const customStyles = {
+  option: provided => ({
+    ...provided,
+    color: 'black'
+  }),
+  control: provided => ({
+    ...provided,
+    color: 'black'
+  }),
+  singleValue: provided => ({
+    ...provided,
+    color: 'black'
+  })
+}
+
+
 
 
     return (
@@ -48,42 +96,20 @@ aria-labelledby="modal-modal-title"
 aria-describedby="modal-modal-description"
 >
 <Box sx={style}>
-<div>
-     <h1 className='mainText'>Submit!</h1>
-     <Formik
-       initialValues={{ email: '', password: '' }}
-       validate={values => {
-         const errors = {};
-         if (!values.email) {
-           errors.email = 'Required';
-         } else if (
-           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-         ) {
-           errors.email = 'Invalid email address';
-         }
-         return errors;
-       }}
-       onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
-       }}
-     >
-       {({ isSubmitting }) => (
-         <Form>
-          
-           <Field type="email" name="email" placeholder="Email" />
-           <ErrorMessage name="email" component="div" />
-           <Field type="password" name="password" placeholder="Password"/>
-           <ErrorMessage name="password" component="div" />
-           <button className={"submitButton"} type="submit" disabled={isSubmitting}>
-             Submit
-           </button>
-         </Form>
-       )}
-     </Formik>
-   </div>
+<h1 id="modal-modal-title" className='mainText'>Placeholder</h1>
+<label className='text'>Mouse</label>
+<Select options={mouseNames} styles={customStyles} isSearchable={isSearchable} isClearable={isClearable} />
+<label className='text'>Mousepad</label>
+<Select options={mousepadNames} styles={customStyles} isSearchable={isSearchable} isClearable={isClearable} />
+
+
+    
+
+    
+    
+
+
+<button className='submitButton' onClick="">Submit</button>
 </Box>
 </Modal>
 </>
