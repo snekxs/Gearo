@@ -111,7 +111,7 @@ a {
 }
 
 .postButton{
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 25px;
   

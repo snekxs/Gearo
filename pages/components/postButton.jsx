@@ -37,7 +37,7 @@ const style = {
 
     return (
       <>
-        <Fab color="primary" aria-label="add" className='postButton' onClick={handleOpen}>
+        <Fab color="primary" aria-label="add"  onClick={handleOpen}>
         <AddIcon />
       </Fab>
 
@@ -55,11 +55,11 @@ aria-describedby="modal-modal-description"
        validate={values => {
          const errors = {};
          if (!values.email) {
-           errors.email = <div className="input-feedback">{errors.email}</div>
+           errors.email = 'Required';
          } else if (
            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
          ) {
-          <div className="input-feedback">{errors.email}</div>
+           errors.email = 'Invalid email address';
          }
          return errors;
        }}
