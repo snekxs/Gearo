@@ -37,7 +37,7 @@ export default function handler(req, res) {
       },
       {
         id: 5,
-        name: "SkyPad 3.0 Glass",
+        name: "3.0 Glass",
         brand: "SkyPad",
         type: "mousepad",
         image_url:
@@ -293,7 +293,7 @@ export default function handler(req, res) {
       {
         id: 36,
         brand: "Pulsar",
-        name: "Pulsar X2 Mini - Wireless Gaming Mouse",
+        name: "X2 Mini ",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/chrome_tzD9jEqYLd_8ebd463f-00b3-490a-96c8-5689aaf3613a.png?v=1660098034",
         type: "mouse",
@@ -301,7 +301,7 @@ export default function handler(req, res) {
       {
         id: 37,
         brand: "Pulsar",
-        name: "Pulsar X2 - Wireless Gaming Mouse",
+        name: "X2 ",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/chrome_tzD9jEqYLd.png?v=1660097853",
         type: "mouse",
@@ -309,7 +309,7 @@ export default function handler(req, res) {
       {
         id: 38,
         brand: "Pulsar",
-        name: "Pulsar X2 - All Red - LIMITED EDITION - Wireless Gaming Mouse",
+        name: "X2 - All Red",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/Pulsar_Gaming_Gears_X2_Wireless_Gaming_Mouse_Red_001.webp?v=1668294576",
         type: "mouse",
@@ -317,7 +317,7 @@ export default function handler(req, res) {
       {
         id: 39,
         brand: "Pulsar",
-        name: "Pulsar X2 - Bruce Lee - LIMITED EDITION - Wireless Gaming Mouse",
+        name: "X2 - Bruce Lee",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/unnamed_4.jpg?v=1671658957",
         type: "mouse",
@@ -325,7 +325,7 @@ export default function handler(req, res) {
       {
         id: 40,
         brand: "Gamesense",
-        name: "Gamesense Meta",
+        name: "Meta",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/GamesenseMeta2.jpg?v=1628919786",
         type: "mouse",
@@ -333,7 +333,7 @@ export default function handler(req, res) {
       {
         id: 41,
         brand: "Fantech",
-        name: "Fantech XD7 Aria - Wireless Gaming Mouse",
+        name: "XD7 Aria ",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/3d4bcafa.jpg?v=1662510106",
         type: "mouse",
@@ -341,7 +341,7 @@ export default function handler(req, res) {
       {
         id: 42,
         brand: "Pulsar",
-        name: "Pulsar X2 Mini - Bruce Lee - LIMITED EDITION - Wireless Gaming Mouse",
+        name: "X2 Mini - Bruce Lee",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/unnamed_4_d1add69e-34e3-40ba-bc9a-5fe54a16250c.jpg?v=1671658969",
         type: "mouse",
@@ -349,7 +349,7 @@ export default function handler(req, res) {
       {
         id: 43,
         brand: "Pulsar",
-        name: "Pulsar X2 Mini - Founder's Edition (FE) Green - LIMITED EDITION - Wireless Gaming Mouse",
+        name: "X2 Mini - Founder's Edition (FE) Green ",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/PulsarGamingGears-X2MiniFEWirelessGamingMouse_Top_FE_720x_811ebc2e-5a4d-40bd-9a29-c3691fd07b6d.webp?v=1668294684",
         type: "mouse",
@@ -358,7 +358,7 @@ export default function handler(req, res) {
       {
         id: 44,
         brand: "Pulsar",
-        name: "Pulsar X2 - Founder's Edition (FE) Green - LIMITED EDITION - Wireless Gaming Mouse",
+        name: "X2 - Founder's Edition (FE) Green",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/PulsarGamingGears-X2FEWirelessGamingMouse_Top_FE_900x_1300916d-73e5-4621-a109-0c086155259c.webp?v=1668294688",
         type: "mouse",
@@ -366,7 +366,7 @@ export default function handler(req, res) {
       {
         id: 45,
         brand: "Pulsar",
-        name: "Pulsar X2 - Wireless Gaming Mouse [OPEN BOX - FINAL SALE]",
+        name: "X2",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/chrome_tzD9jEqYLd_6caef2fa-7103-4c15-b21a-cde351eb7261.png?v=1663026915",
         type: "mouse",
@@ -374,7 +374,7 @@ export default function handler(req, res) {
       {
         id: 46,
         brand: "Pulsar",
-        name: "Pulsar X2 Mini - Wireless Gaming Mouse [OPEN BOX - FINAL SALE]",
+        name: "X2 Mini",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/chrome_tzD9jEqYLd_860ae337-5e2f-426f-9a7f-a8d5f2d189a5.png?v=1663026956",
         type: "mouse",
@@ -382,7 +382,7 @@ export default function handler(req, res) {
       {
         id: 47,
         brand: "Pulsar",
-        name: "Pulsar X2 Mini - All Red - LIMITED EDITION - Wireless Gaming Mouse",
+        name: "X2 Mini - All Red",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/Pulsar_Gaming_Gears_X2_Wireless_Gaming_Mouse_Red_001_c363fb2a-3f57-48e3-89db-cd01c2af83b6.webp?v=1668294700",
         type: "mouse",
@@ -390,7 +390,7 @@ export default function handler(req, res) {
       {
         id: 48,
         brand: "Fantech",
-        name: "Fantech Helios Go XD5 - Wireless Gaming Mouse",
+        name: "Helios Go XD5 ",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/XD5-1.png?v=1668124064",
         type: "mouse",
@@ -398,7 +398,7 @@ export default function handler(req, res) {
       {
         id: 49,
         brand: "Ninjutso",
-        name: "Ninjutso Sora Wireless Gaming Mouse - White",
+        name: "Sora Wireless Gaming Mouse - White",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/chrome_h9N66a0JfJ.jpg?v=1673416347",
         type: "mouse",
@@ -406,7 +406,7 @@ export default function handler(req, res) {
       {
         id: 50,
         brand: "Gamesense",
-        name: "Gamesense MVP Wireless",
+        name: "MVP Wireless",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/MVP_Final_1024x1024_2x_41a3e7c4-aff5-4cfb-84dd-0a663eee61d9.webp?v=1650156076",
         type: "mouse",
@@ -414,7 +414,7 @@ export default function handler(req, res) {
       {
         id: 51,
         brand: "Ninjutso",
-        name: "Ninjutso Sora Wireless Gaming Mouse - Black",
+        name: "Sora Wireless Gaming Mouse - Black",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/chrome_liKEk0F7oZ.jpg?v=1673416242",
         type: "mouse",
@@ -422,7 +422,7 @@ export default function handler(req, res) {
       {
         id: 52,
         brand: "Lethal Gaming Gear",
-        name: "LA-1 - Wireless Gaming Mouse [ESTIMATED Q2 2023]",
+        name: "LA-1",
         image_url:
           "https://cdn.shopify.com/s/files/1/0255/9832/8929/products/6.png?v=1660593043",
         type: "mouse",
@@ -590,7 +590,7 @@ export default function handler(req, res) {
       {
         id: 73,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie G-SR-SE Gaming Mousepad (Rogue Edition)",
+        name: "G-SR-SE Gaming Mousepad (Rogue Edition)",
         image:
           "https://image.benq.com/is/image/benqco/02-g-sr-se-sr-rouge-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mousepad",
@@ -598,7 +598,7 @@ export default function handler(req, res) {
       {
         id: 74,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie V2 Series - Limited Edition Red Wired E-Sport Gaming Mice",
+        name: "V2 Series - Limited Edition Red Wired E-Sport Gaming Mice",
         image:
           "https://image.benq.com/is/image/benqco/01-S2-v2-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -606,7 +606,7 @@ export default function handler(req, res) {
       {
         id: 75,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie EC1-C - 80g E-Sports Wired Gaming Mouse",
+        name: "EC1-C",
         image:
           "https://image.benq.com/is/image/benqco/01-ec1-c-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -614,7 +614,7 @@ export default function handler(req, res) {
       {
         id: 76,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie EC3-C - 70g E-Sports Wired Gaming Mouse",
+        name: "EC3-C",
         image:
           "https://image.benq.com/is/image/benqco/01-ec3-c-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -622,7 +622,7 @@ export default function handler(req, res) {
       {
         id: 77,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie ZA11-C - 72g E-Sports Wired Gaming Mouse",
+        name: "ZA11-C",
         image:
           "https://image.benq.com/is/image/benqco/01-ZA11C-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -630,7 +630,7 @@ export default function handler(req, res) {
       {
         id: 78,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie ZA13-C - 65g E-Sports Wired Gaming Mouse",
+        name: "ZA13-C",
         image:
           "https://image.benq.com/is/image/benqco/01-za11-b-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -638,7 +638,7 @@ export default function handler(req, res) {
       {
         id: 79,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie EC2-C - 73g E-Sports Wired Gaming Mouse",
+        name: "EC2-C ",
         image:
           "https://image.benq.com/is/image/benqco/01-ec2-c-top-1?$ResponsivePreset$",
         type: "mouse",
@@ -646,7 +646,7 @@ export default function handler(req, res) {
       {
         id: 80,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie ZA12-C - 70g E-Sports Wired Gaming Mouse",
+        name: "ZA12-C ",
         image:
           "https://image.benq.com/is/image/benqco/01-za12-b-za-black-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -654,7 +654,7 @@ export default function handler(req, res) {
       {
         id: 81,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie FK2-C - 70g E-Sports Wired Gaming Mouse",
+        name: "FK2-C ",
         image:
           "https://image.benq.com/is/image/benqco/01-FK1C-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -662,7 +662,7 @@ export default function handler(req, res) {
       {
         id: 82,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie FK1-C - 74g E-Sports Wired Gaming Mouse",
+        name: "FK1-C ",
         image:
           "https://cdn.shopify.com/s/files/1/0199/7570/0534/products/8c4c7256c00e4bee684c86ab0c63bded.jpg?v=1658817687",
         type: "mouse",
@@ -670,7 +670,7 @@ export default function handler(req, res) {
       {
         id: 83,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie FK1+-C - 77g E-Sports Wired Gaming Mouse",
+        name: "FK1+-C ",
         image:
           "https://image.benq.com/is/image/benqco/01-FK1C-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mouse",
@@ -678,7 +678,7 @@ export default function handler(req, res) {
       {
         id: 84,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie S1-C - 72g E-sports Wired Gaming Mouse",
+        name: "S1-C ",
         image:
           "https://www.benq.com/content/dam/zowie/en/product/mouse/s/s1-c/gallery/01-S1C-top-01.png",
         type: "mouse",
@@ -686,7 +686,7 @@ export default function handler(req, res) {
       {
         id: 85,
         brand: "BenQ Zowie",
-        name: "BenQ ZOWIE GTF-X Gaming Mousepad (Large)",
+        name: "GTF-X Gaming Mousepad (Large)",
         image:
           "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/104/10481/10481876.jpg",
         type: "mousepad",
@@ -694,7 +694,7 @@ export default function handler(req, res) {
       {
         id: 86,
         brand: "BenQ Zowie",
-        name: "BenQ ZOWIE P TF-X Gaming Mousepad (Small)",
+        name: "P TF-X Gaming Mousepad (Small)",
         image:
           "https://image.benq.com/is/image/benqco/03-ptf-x-tf-x-black-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mousepad",
@@ -702,7 +702,7 @@ export default function handler(req, res) {
       {
         id: 87,
         brand: "BenQ Zowie",
-        name: "BenQ Zowie S2-C - 69g E-Sports Wired Gaming Mouse",
+        name: "S2-C ",
         image:
           "https://www.benq.com/content/dam/zowie/en/product/mouse/s/s2-c/gallery/01-S2C-top-1.png",
         type: "mouse",
@@ -710,7 +710,7 @@ export default function handler(req, res) {
       {
         id: 88,
         brand: "BenQ Zowie",
-        name: "Benq Zowie P-SR Gaming Mousepad (Small)",
+        name: "P-SR Gaming Mousepad (Small)",
         image:
           "https://image.benq.com/is/image/benqco/02-p-sr-sr-black-top?$ResponsivePreset$&fmt=png-alpha",
         type: "mousepad",
@@ -718,7 +718,7 @@ export default function handler(req, res) {
       {
         id: 89,
         brand: "BenQ Zowie",
-        name: "Benq Zowie G-SR Gaming Mousepad (Large)",
+        name: "G-SR Gaming Mousepad (Large)",
         image:
           "https://www.benq.com/content/dam/zowie/en/product/mousepad/g-sr/gallery/03-g-sr-sr-black-top45.png",
         type: "mousepad",
@@ -726,7 +726,7 @@ export default function handler(req, res) {
       {
         id: 90,
         brand: "BenQ Zowie",
-        name: "BenQ ZOWIE G-SR-SE Gaming Mousepad (DEEP BLUE)",
+        name: "G-SR-SE Gaming Mousepad (DEEP BLUE)",
         image:
           "https://m.media-amazon.com/images/S/aplus-media/sota/784f8beb-9767-4382-bedd-c55da9ae946b.__CR300,295,2120,1311_PT0_SX970_V1___.jpg",
         type: "mousepad",
