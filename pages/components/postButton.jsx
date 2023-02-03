@@ -26,7 +26,7 @@ export default function PostButton() {
   const [value, setValue] = useState("Red");
 
   React.useEffect(() => {
-    fetch('http://localhost:3000/api/products')
+    fetch('/api/products')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
