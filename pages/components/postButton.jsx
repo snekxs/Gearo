@@ -53,7 +53,7 @@ const submit = () => {
   const name = document.querySelector('.input').value
   const mouseName = mouse.value
   const mousepadName = mousepad.value
-  const { data, error } = supabase
+  supabase
   .from('users')
   .insert([
     { name: name, mouse: mouseName, mousepad: mousepadName },

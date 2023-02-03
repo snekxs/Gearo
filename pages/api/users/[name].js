@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     query: { name },
   } = req;
 
-  const { data, error } = await supabase
+  await supabase
     .from("users")
     .select("*")
     .eq("name", name)
