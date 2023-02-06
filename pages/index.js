@@ -1,11 +1,10 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-
-import { createClient } from "@supabase/supabase-js";
 import Header from "./components/header";
 
 import * as React from "react";
 import PostButton from "./components/postButton";
+
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
@@ -19,6 +18,7 @@ export default function Home() {
       <Header />
       <div className="postButton">
         <PostButton />
+        aw
       </div>
     </>
   );
