@@ -18,7 +18,6 @@ export default function Home() {
       <Header />
       <div className="postButton">
         <PostButton />
-        aw
       </div>
     </>
   );
