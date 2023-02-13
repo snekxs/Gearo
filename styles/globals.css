@@ -140,7 +140,8 @@ a {
   }
 .mainText{
   font-size: 30px;
-  font-weight: 500;
+  font-family: "Montserrat";
+  font-weight: bold;
   margin: 0.5rem 0;
   color: black;
   margin-bottom: 12px;
@@ -181,7 +182,26 @@ input {
   background-color: white;
   color: black;
 }
+.labels{
+  font-family: "Montserrat";
+  font-weight: normal;
+  display: block;
+  margin: 10px;
+  color: black;
+  margin-top: 20px;
+}
 
+.inputs{
+  width: 80%;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
 
 
 
@@ -193,8 +213,23 @@ input {
   width: 100%;
   margin-top: 20px;
   border: none;
+  border-color: none;
   border-radius: 12px;
   cursor: pointer;
+}
+
+.submitButtonAdmin{
+  font-family: "Montserrat";
+  font-weight: bold;
+  background-color: #007eff;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 12px;
+  width: 78%;
+  
+  
 }
 
 .maintenance{
@@ -211,3 +246,23 @@ input {
   font-size: 5vw;
   padding: 20px;
 }
+
+.form{
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+
+
+  
+ }
