@@ -1,3 +1,26 @@
+
+@font-face{
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf");
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -172,4 +195,19 @@ input {
   border: none;
   border-radius: 12px;
   cursor: pointer;
+}
+
+.maintenance{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  min-height: 100vh;
+  user-select: none;
+  font-size: 5vw;
+  padding: 20px;
 }
