@@ -5,7 +5,7 @@ import Header from "./components/header";
 import * as React from "react";
 import PostButton from "./components/postButton";
 
-const maintenance = false;
+const maintenance = true;
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
