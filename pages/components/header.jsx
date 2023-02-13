@@ -26,6 +26,7 @@ export default function Header() {
             Gearo
           </Typography>
           <Button color="inherit">Login</Button>
+
         </Toolbar>
       </AppBar>
     </Box>

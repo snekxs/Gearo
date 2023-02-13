@@ -23,7 +23,8 @@ export default async function handler(req, res) {
         if (response.data.length === 0) {
           res.status(404).json({ message: "User not found" });
         } else {
-          res.status(200).json(response.data);
+          const mousepad = response.data[0].mousepad;
+          res.send(mousepad);
         }
       })
       .catch((error) => {
