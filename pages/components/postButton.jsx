@@ -20,6 +20,10 @@ export default function PostButton() {
   }, []);
 
   const mouseNamesFilter = data.data?.filter((item) => item.type === "mouse");
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
   const mouseNames = mouseNamesFilter
     ?.map((item) => ({
       value: `${item.brand} ${item.name}`,
@@ -50,7 +54,7 @@ export default function PostButton() {
     console.log(name);
     await supabase
       .from("users")
-      .insert([{ name: name, mouse: mouse.value, mousepad: mousepad.value }]);
+      .insert([{ name: capitalizeFirstLetter(name), mouse: mouse.value, mousepad: mousepad.value }]);
     alert("Submitted");
   };
 
