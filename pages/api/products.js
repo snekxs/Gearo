@@ -731,6 +731,30 @@ export default function handler(req, res) {
           "https://m.media-amazon.com/images/S/aplus-media/sota/784f8beb-9767-4382-bedd-c55da9ae946b.__CR300,295,2120,1311_PT0_SX970_V1___.jpg",
         type: "mousepad",
       },
+      {
+        id: 91,
+        brand: "Moondrop",
+        name: "Aria",
+        image:
+          "https://cdn.shopify.com/s/files/1/0065/4432/6771/products/MoonDrop-Aria-2021-Earphones-High-Performance-LCP-Diaphragm-Dynamic-IEMs-Earbuds-with-Detachable-Cable.png?v=1632423765",
+        type: "Headphones",
+      },
+      {
+        id: 92,
+        brand: "Moondrop",
+        name: "Kanas Pro",
+        image:
+          "https://massdrop-s3.imgix.net/product-images/moondrop-kanas-pro/FP/zv3oO0KUTiWYhdbCRuyW_PC.png?bg=f0f0f0",
+        type: "Headphones",
+      },
+      {
+        id: 93,
+        brand: "Moondrop",
+        name: "Aria Snow Edition",
+        image:
+          "https://cdn.shopify.com/s/files/1/0013/3896/6076/products/9381fcb9ef34b364e90f871c3455cc0e.png?v=1658115995",
+        type: "Headphones",
+      },
     ],
   });
 }
