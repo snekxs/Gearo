@@ -3,7 +3,6 @@ import { Inter } from "@next/font/google";
 import { Montserrat } from "@next/font/google";
 import Header from "./components/header";
 import * as React from "react";
-import PostButton from "./components/postButton";
 
 const maintenance = false;
 
@@ -35,9 +34,6 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
-        <div className="postButton">
-          <PostButton />
-        </div>
       </>
     );
   }
