@@ -1,6 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
 import * as React from "react";
-import submit from "pages/components/postButton.jsx";
 
 const supabaseUrl = "https://ridzyuyhihrriayeweqw.supabase.co";
 const supabaseKey =
