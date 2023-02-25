@@ -4,8 +4,11 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { useTheme } from "next-themes";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import ThemeChanger from "./ThemeChanger";
+import Login from "./Login";
 const ref = React.createRef();
 
 import { useEffect, useState } from "react";
@@ -14,15 +17,7 @@ export default function Header() {
   const [darkMode, setDarkMode] = React.useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
-  function darkModeToggle() {
-    let element = document.body;
-    let header = ref.current;
-    element.classList.toggle("dark");
-    header.classList.toggle("headerdark");
-
-    setIsClicked((isClicked) => !isClicked);
-    localStorage.setItem("darkMode", !isClicked);
-  }
+  //todo fix darkMode local storage
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -45,14 +40,9 @@ export default function Header() {
           >
             Gearo
           </Typography>
-          <Button color="inherit">Login</Button>
-          <Button
-            className="dark-mode-btn"
-            color="inherit"
-            onClick={darkModeToggle}
-          >
-            {isClicked ? "Light Mode" : "Dark Mode"}
-          </Button>
+          <Login />
+
+          <ThemeChanger />
         </Toolbar>
       </AppBar>
     </Box>

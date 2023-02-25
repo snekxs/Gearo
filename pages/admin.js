@@ -1,7 +1,22 @@
 import Head from "next/head";
-import Header from "./components/header";
+import Header from "./components/Header";
 import { Button } from "@mui/material";
+import { StatusPage, StatusPageConfig } from "react-healthy";
+
 export default function Admin() {
+  const statusPageConfig = {
+    apis: [
+      {
+        name: "User API",
+        endpoint: "/api/users",
+      },
+      {
+        name: "Product API",
+        endpoint: "/api/products",
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -10,22 +25,8 @@ export default function Admin() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <div className="form" align="center">
-        <h1 className="mainText">Admin Login</h1>
-        <form>
-          <label className="labels">
-            Username:
-            <input type="text" className="inputs" name="username" />
-          </label>
-          <label className="labels">
-            Password:
-            <input type="text" className="inputs" name="password" />
-          </label>
-          <button className="submitButtonAdmin" onClick={"submit"}>
-            Submit
-          </button>
-        </form>
+      <div className="status">
+        <StatusPage config={statusPageConfig} />
       </div>
     </>
   );

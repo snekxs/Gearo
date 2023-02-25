@@ -11,8 +11,6 @@ export default async function handler(req, res) {
     .from("users")
     .select("*")
     .then((response) => {
-      console.log("response", response);
-
       if (response.data.length === 0) {
         res.status(404).json({ message: "User not found" });
       } else {

@@ -22,6 +22,20 @@
 }
 
 
+:root{
+  --background: white;
+  --color: black;
+}
+
+[data-theme='dark'] {
+  --background: #16161C;
+  --color: white;
+}
+
+.loginform{
+  font-family: 'Montserrat';
+}
+
 
 
 * {
@@ -37,7 +51,7 @@ body {
 }
 
 body {
-  background-color: white;
+  background-color: var(--background);
   transition: .5s;
 }
 
@@ -54,6 +68,13 @@ a {
 
 .title{
   user-select: none;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.status{
+  font-family: 'Montserrat';
 }
 
 .postButton{
@@ -69,10 +90,8 @@ a {
   margin: 0.5rem 0 12px;
 }
 
-.dark {
-  color: #dcdcdc;
-  background-color: black;
-  transition: .5s;
+.submit{
+  margin-top: 5px;
 }
 
 
@@ -84,15 +103,14 @@ a {
 }
 
 .header{
-  color:black;
-  background-color: white;
+  color:var(--color);
+  background-color: var(--background);
   transition: .5s;
 }
 
-.headerdark{
-  color:white;
-  background-color:black;
-  transition: .5s;
+.fieldtext{
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 
@@ -188,6 +206,8 @@ label{
   padding: 20px;
   opacity: 0.85;
 }
+
+
 
 .form{
   background-color: white;
