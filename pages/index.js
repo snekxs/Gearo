@@ -8,7 +8,7 @@ import ThemeChanger from "./components/ThemeChanger";
 
 // Theme is forced, we shouldn't allow user to change the theme
 
-const maintenance = true;
+const maintenance = false;
 
 // Theme is forced, we shouldn't allow user to change the theme
 
