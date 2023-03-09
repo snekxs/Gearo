@@ -35,6 +35,7 @@ export default function Maintenance() {
           <Button onClick={back} color={"inherit"} sx={{ fontSize: 20 }}>
             Back
           </Button>
+
           <Button onClick={submit} color={"inherit"} sx={{ fontSize: 20 }}>
             Enter
           </Button>
