@@ -21,15 +21,24 @@ export default function Maintenance() {
     }
   };
 
+  const back = () => {
+    setText((text) => !text)
+    setReveal((reveal) => !reveal)
+  }
+
   return (
     <div className="maintenance">
       {text && <h1 onClick={clickEvent}>Be Right Back.</h1>}
       {reveal && (
         <div className={"accessform"}>
           <input id="submit" className="accessInput" placeholder={"Access Key"} />
+          <Button onClick={back} color={"inherit"} sx={{ fontSize: 20 }}>
+            Back
+          </Button>
           <Button onClick={submit} color={"inherit"} sx={{ fontSize: 20 }}>
             Enter
           </Button>
+
         </div>
       )}
     </div>
