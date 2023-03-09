@@ -178,7 +178,7 @@ label{
 }
 
 .submitButtonAdmin{
-  font-family: "Montserrat";
+  font-family: "Montserrat", serif;
   font-weight: bold;
   background-color: #007eff;
   color: white;
@@ -187,9 +187,16 @@ label{
   font-size: 16px;
   border-radius: 12px;
   width: 78%;
-  
-  
 }
+
+.accessInput{
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+
+
 
 .maintenance{
   
@@ -201,11 +208,16 @@ label{
   font-weight: bold;
   font-style: italic;
   min-height: 100vh;
-  user-select: none;
   font-size: 5vw;
   padding: 20px;
   opacity: 0.85;
 }
+.maintenance h1{
+  cursor: pointer;
+  user-select: none;
+
+}
+
 
 
 
