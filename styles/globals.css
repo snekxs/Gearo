@@ -232,13 +232,19 @@ label {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+
   user-select: none;
 }
 
 .fourohfour h2 {
+  padding: 20px;
   font-size: 5.2854122621564485vw;
 }
 
+.back {
+  padding: 50px;
+  font-size: 4vw;
+}
 
 
 .form {
