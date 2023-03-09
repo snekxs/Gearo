@@ -267,17 +267,58 @@ label {
 
 }
 
-.backgroundVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  opacity: 0.5;
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
+.toggleMaintenance {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+
+.Collapsible__trigger {
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+.AdminLogin {
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.AdminLogin input {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.AdminLogin h1 {
+  padding: 20px
+}
+
+.adminclick {
+  cursor: pointer;
+}
+
+.adminpassword {
+  -webkit-text-security: disc;
+
 }
