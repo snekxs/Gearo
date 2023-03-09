@@ -29,7 +29,16 @@ export default function Home() {
 
 
   if (maintenanceMode) {
-    return <Maintenance />;
+    return (
+      <>
+        <Head>
+          <title>Gearo</title>
+
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Maintenance />
+      </>)
   }
   return (
     <>
