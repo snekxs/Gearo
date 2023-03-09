@@ -1,9 +1,8 @@
-
-@font-face{
+@font-face {
   font-family: "Montserrat";
   src: url("/pages/fonts/Montserrat-Regular.ttf");
-  font-weight:normal;
-  font-style:normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -22,7 +21,7 @@
 }
 
 
-:root{
+:root {
   --background: white;
   --color: black;
 }
@@ -32,7 +31,7 @@
   --color: white;
 }
 
-.loginform{
+.loginform {
   font-family: 'Montserrat';
 }
 
@@ -66,23 +65,24 @@ a {
   }
 }
 
-.title{
+.title {
   user-select: none;
   font-family: 'Montserrat';
   font-weight: bold;
   font-size: 25px;
 }
 
-.status{
+.status {
   font-family: 'Montserrat';
 }
 
-.postButton{
+.postButton {
   position: fixed;
   bottom: 30px;
   right: 25px;
-  }
-.mainText{
+}
+
+.mainText {
   font-size: 30px;
   font-family: "Montserrat", serif;
   font-weight: bold;
@@ -90,7 +90,7 @@ a {
   margin: 0.5rem 0 12px;
 }
 
-.submit{
+.submit {
   margin-top: 5px;
 }
 
@@ -98,17 +98,17 @@ a {
 
 
 
-.text{
+.text {
   color: black;
 }
 
-.header{
-  color:var(--color);
+.header {
+  color: var(--color);
   background-color: var(--background);
   transition: .5s;
 }
 
-.fieldtext{
+.fieldtext {
   margin-top: 30px;
   margin-bottom: 5px;
 }
@@ -118,7 +118,8 @@ a {
   color: red;
   margin-top: .25rem;
 }
-.error{
+
+.error {
   color: red;
   margin-top: .25rem;
 }
@@ -129,7 +130,7 @@ label {
   margin-bottom: .5rem;
   color: black;
   margin-top: 20px;
-  
+
 }
 
 input {
@@ -142,7 +143,8 @@ input {
   background-color: white;
   color: black;
 }
-label{
+
+label {
   font-family: "Montserrat", serif;
   font-weight: normal;
   display: block;
@@ -150,7 +152,7 @@ label{
 
 }
 
-.inputs{
+.inputs {
   width: 80%;
   padding: .5rem;
   display: flex;
@@ -164,7 +166,7 @@ label{
 
 
 
-.submitButton{
+.submitButton {
   background-color: #007eff;
   color: white;
   padding: 10px;
@@ -177,7 +179,7 @@ label{
   cursor: pointer;
 }
 
-.submitButtonAdmin{
+.submitButtonAdmin {
   font-family: "Montserrat", serif;
   font-weight: bold;
   background-color: #007eff;
@@ -189,7 +191,7 @@ label{
   width: 78%;
 }
 
-.accessInput{
+.accessInput {
   width: 400px;
   height: 50px;
   border-radius: 10px;
@@ -198,8 +200,8 @@ label{
 
 
 
-.maintenance{
-  
+.maintenance {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,16 +214,34 @@ label{
   padding: 20px;
   opacity: 0.85;
 }
-.maintenance h1{
+
+.maintenance h1 {
   cursor: pointer;
   user-select: none;
 
 }
 
+.fourohfour {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  font-style: italic;
+  font-size: 5vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+.fourohfour h2 {
+  font-size: 5.2854122621564485vw;
+}
 
 
 
-.form{
+.form {
   background-color: white;
   position: fixed;
   top: 50%;
@@ -230,7 +250,7 @@ label{
   transform: translate(-50%, -50%);
   width: 400px;
   height: 300px;
-  
+
   align-items: center;
   justify-content: center;
 
@@ -238,10 +258,10 @@ label{
 
 
 
-  
- }
 
- .backgroundVideo{
+}
+
+.backgroundVideo {
   position: fixed;
   top: 0;
   left: 0;
@@ -254,4 +274,4 @@ label{
   -moz-filter: blur(10px);
   -o-filter: blur(10px);
   -ms-filter: blur(10px);
- }
+}
