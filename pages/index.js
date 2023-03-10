@@ -10,28 +10,22 @@ import Maintenance from "@/pages/components/Maintenance";
 import { useState, useEffect } from "react";
 
 
-export async function getServerSideProps(context) {
-  const { req } = context;
-  let host = req.headers.host
-
-  const res = await fetch(`http://${host}/api/config`)
-  const data = await res.json();
-
-  return {
-    props: {
-      data: data
-    }
-  }
-}
-
-
 const inter = Inter({ subsets: ["latin"] });
 export default function Home({ data }) {
   const [config, setConfig] = useState()
-  let maintenanceMode = data[0].maintenance
+  const [maintenanceMode, setMaintenanceMode] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`/api/config`)
+      const data = await res.json();
+      setMaintenanceMode(data[0].maintenance)
+    }
+    fetchData();
+  }, [])
 
 
-  if (maintenanceMode) {
+  if (maintenanceMode == true) {
     return (
       <>
         <Head>
@@ -40,10 +34,11 @@ export default function Home({ data }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Maintenance />
-      </>)
-  }
-  return (
-    <>
+      </>
+    )
+  } 
+  else if (maintenanceMode == false) {
+    return <>
       <Head>
         <title>Gearo</title>
 
@@ -53,5 +48,14 @@ export default function Home({ data }) {
       <Header />
       <HomePageContent />
     </>
-  );
+  }
+  
+  // Initial value of state, did not get response from server
+  return <>
+      <Head>
+          <title>Gearo</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+    </>
 }
