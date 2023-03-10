@@ -10,22 +10,25 @@ import Maintenance from "@/pages/components/Maintenance";
 import { useState, useEffect } from "react";
 
 
+export async function getServerSideProps(context) {
+  const { req } = context;
+  let host = req.headers.host
+
+  const res = await fetch(`http://${host}/api/config`)
+  const data = await res.json();
+
+  return {
+    props: {
+      data: data
+    }
+  }
+}
+
+
 const inter = Inter({ subsets: ["latin"] });
-export default function Home() {
-
+export default function Home({ data }) {
   const [config, setConfig] = useState()
-  const [maintenanceMode, setMaintenance] = useState();
-  useEffect(() => {
-    fetch("api/config")
-      .then((response) => response.json())
-      .then((data) => {
-        setMaintenance(data[0].maintenance);
-      });
-  }, []);
-
-
-
-
+  let maintenanceMode = data[0].maintenance
 
 
   if (maintenanceMode) {
@@ -33,7 +36,6 @@ export default function Home() {
       <>
         <Head>
           <title>Gearo</title>
-
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
