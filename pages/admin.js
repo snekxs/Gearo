@@ -5,7 +5,7 @@ import * as React from 'react';
 import { createClient } from "@supabase/supabase-js";
 
 import { useState, useEffect } from "react";
-import Supabase from "../helpers/Supabase";
+import Supabase from "./helpers/Supabase";
 import { StatusPage, StatusPageConfig } from "react-healthy";
 import Collapsible from 'react-collapsible';
 import Switch from '@mui/material/Switch';
