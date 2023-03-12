@@ -1,16 +1,14 @@
 import { createClient } from "@supabase/supabase-js";
 import * as React from "react";
 
-import Supabase from "@/pages/helpers/Supabase";
-
-
+import { supabase } from "@/components/helpers/Supabase";
 export default async function handler(req, res) {
   const {
     query: { name },
   } = req;
 
   if (req.method === "GET") {
-    await Supabase()
+    await supabase
       .from("users")
       .select("*")
       .eq("name", name)

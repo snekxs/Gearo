@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Header from "./components/Header";
 import { Button } from "@mui/material";
 import * as React from 'react';
 import { createClient } from "@supabase/supabase-js";
 
 import { useState, useEffect } from "react";
-import Supabase from "./helpers/Supabase";
+import { supabase } from "@/components/helpers/Supabase";
 import { StatusPage, StatusPageConfig } from "react-healthy";
 import Collapsible from 'react-collapsible';
 import Switch from '@mui/material/Switch';
@@ -31,9 +30,9 @@ export default function Admin() {
 
     setChecked(!checked)
     if (checked === true) {
-      await Supabase().from("maintenance").update({ maintenance: 'true' }).eq('maintenance', "false")
+      await supabase.from("maintenance").update({ maintenance: 'true' }).eq('maintenance', "false")
     } else {
-      await Supabase().from("maintenance").update({ maintenance: 'false' }).eq('maintenance', "true")
+      await supabase.from("maintenance").update({ maintenance: 'false' }).eq('maintenance', "true")
     }
   };
 
@@ -64,7 +63,7 @@ export default function Admin() {
     const user = document.getElementById("username").value
     const pass = document.getElementById('password').value
 
-    Supabase().from("adminpasswords").select("password").then((response) => {
+    supabase.from("adminpasswords").select("password").then((response) => {
 
       const data = response.data
 

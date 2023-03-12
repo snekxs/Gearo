@@ -2,11 +2,11 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { Montserrat } from "@next/font/google";
 import { createClient } from "@supabase/supabase-js";
-import Header from "./components/Header";
+import Header from "@/components/Header";
 import * as React from "react";
-import HomePageContent from "./components/HomePageContent";
-import ThemeChanger from "./components/ThemeChanger";
-import Maintenance from "@/pages/components/Maintenance";
+import HomePageContent from "@/components/HomePageContent"
+import ThemeChanger from "@/components/ThemeChanger";
+import Maintenance from "@/components/Maintenance";
 import { useState, useEffect } from "react";
 
 
