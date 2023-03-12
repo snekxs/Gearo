@@ -36,7 +36,7 @@ export default function Home({ data }) {
         <Maintenance />
       </>
     )
-  } 
+  }
   else if (maintenanceMode == false) {
     return <>
       <Head>
@@ -49,13 +49,13 @@ export default function Home({ data }) {
       <HomePageContent />
     </>
   }
-  
+
   // Initial value of state, did not get response from server
   return <>
-      <Head>
-          <title>Gearo</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-    </>
+    <Head>
+      <title>Gearo</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+  </>
 }
