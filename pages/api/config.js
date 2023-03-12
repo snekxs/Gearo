@@ -1,9 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
-import Supabase from "../helpers/Supabase";
+import { supabase } from "@/components/helpers/Supabase";
 
 
 export default async function handler(req, res) {
-    await Supabase()
+    await supabase
         .from("maintenance")
         .select("*")
         .then((response) => {
