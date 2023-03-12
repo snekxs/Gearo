@@ -5,14 +5,10 @@ import * as React from 'react';
 import { createClient } from "@supabase/supabase-js";
 
 import { useState, useEffect } from "react";
-
+import Supabase from "./helpers/Supabase";
 import { StatusPage, StatusPageConfig } from "react-healthy";
 import Collapsible from 'react-collapsible';
 import Switch from '@mui/material/Switch';
-const supabaseUrl = "https://ridzyuyhihrriayeweqw.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJpZHp5dXloaWhycmlheWV3ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzQ4OTI5NTUsImV4cCI6MTk5MDQ2ODk1NX0.dNloclNcqXm6V_w1TJ19RV3PXRSjOY03DXNfdFVhfRU";
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 
 export default function Admin() {
@@ -35,9 +31,9 @@ export default function Admin() {
 
     setChecked(!checked)
     if (checked === true) {
-      await supabase.from("maintenance").update({ maintenance: 'true' }).eq('maintenance', "false")
+      await Supabase().from("maintenance").update({ maintenance: 'true' }).eq('maintenance', "false")
     } else {
-      await supabase.from("maintenance").update({ maintenance: 'false' }).eq('maintenance', "true")
+      await Supabase().from("maintenance").update({ maintenance: 'false' }).eq('maintenance', "true")
     }
   };
 
@@ -68,7 +64,7 @@ export default function Admin() {
     const user = document.getElementById("username").value
     const pass = document.getElementById('password').value
 
-    supabase.from("adminpasswords").select("password").then((response) => {
+    Supabase().from("adminpasswords").select("password").then((response) => {
 
       const data = response.data
 
