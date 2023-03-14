@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeChanger from "./ThemeChanger";
+import ProductAdder from "./ProductAdder";
 import Login from "./Login";
 const ref = React.createRef();
 
@@ -31,20 +32,23 @@ export default function Header() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
+
           </IconButton>
+          <h1 className="title">Gearo</h1>
           <Typography
             className="title"
             variant="h6"
             component="div"
             sx={{ flexGrow: 1 }}
           >
-            Gearo
-          </Typography>
-          <Login />
 
+          </Typography>
+
+          <Login />
+          <ProductAdder />
           <ThemeChanger />
         </Toolbar>
       </AppBar>
-    </Box>
+    </Box >
   );
 }
