@@ -38,6 +38,7 @@
     "reactstrap": "^9.1.6",
     "use-local-storage": "^2.3.6",
     "use-local-storage-state": "^18.1.2",
+    "webhook-discord": "^3.7.8",
     "yup": "^0.32.11"
   }
 }

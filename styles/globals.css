@@ -67,7 +67,7 @@ a {
 
 .title {
   user-select: none;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
   font-weight: bold;
   font-size: 25px;
 }

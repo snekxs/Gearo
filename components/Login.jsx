@@ -64,9 +64,9 @@ export default function Login() {
     handleOpenRegister();
   };
 
-  const submitRegister = () => {};
+  const submitRegister = () => { };
 
-  const submitLogin = () => {};
+  const submitLogin = () => { };
 
   return (
     <>
