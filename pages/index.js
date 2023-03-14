@@ -25,7 +25,7 @@ export default function Home({ data }) {
   }, [])
 
 
-  if (maintenanceMode == false) {
+  if (maintenanceMode == true) {
     return (
       <>
         <Head>
@@ -37,7 +37,7 @@ export default function Home({ data }) {
       </>
     )
   }
-  else if (maintenanceMode == true) {
+  else if (maintenanceMode == false) {
     return <>
       <Head>
         <title>Gearo</title>
