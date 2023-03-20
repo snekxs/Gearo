@@ -48,10 +48,10 @@ export default function AdminHeader() {
     setState({ ...state, [anchor]: open });
   };
   const icons = [
-    <GroupIcon />,
-    <InventoryIcon />,
-    <SettingsIcon />,
-    <DnsIcon />,
+    <GroupIcon key="group" />,
+    <InventoryIcon key="inventory" />,
+    <SettingsIcon key="settings" />,
+    <DnsIcon key="dns" />,
   ];
 
   const links = [

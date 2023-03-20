@@ -22,7 +22,7 @@ export default function ServerStatus() {
     if (logged) {
       setLog(true);
     }
-  });
+  }, []);
   if (log) {
     return (
       <>

@@ -31,7 +31,7 @@ export default function Admin() {
     if (logged) {
       setLogged(true);
     }
-  });
+  }, []);
 
   const handleChange = async () => {
     setChecked(!checked);

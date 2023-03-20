@@ -13,7 +13,7 @@ export default function SiteSettings() {
     if (logged) {
       setLog(true);
     }
-  });
+  }, []);
   const handleChange = async () => {
     setChecked(!checked);
     if (checked === true) {

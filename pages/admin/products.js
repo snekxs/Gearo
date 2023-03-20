@@ -11,7 +11,7 @@ export default function Products() {
     if (logged) {
       setLog(true);
     }
-  });
+  }, []);
   if (log) {
     return (
       <>
