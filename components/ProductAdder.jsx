@@ -1,6 +1,6 @@
 
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
-const webhook = require("webhook-discord")
+import Link from 'next/link';
 
 
 
@@ -9,11 +9,12 @@ import { Button } from '@mui/material';
 
 const clickEvent = () => {
 
-
 }
 
 export default function ProductAdder() {
-    return (<Button
+    return (
+    <Link href="/product">
+    <Button
         id="basic-button"
 
         aria-haspopup="true"
@@ -22,5 +23,6 @@ export default function ProductAdder() {
 
     >
         <ControlPointIcon />
-    </Button>)
+    </Button>
+    </Link>)
 }
