@@ -37,7 +37,7 @@ export default function SiteSettings() {
     }
   };
   useEffect(() => {
-    fetch("api/config")
+    fetch("/api/config")
       .then((response) => response.json())
       .then((data) => {
         const mode = data[0].maintenance;
