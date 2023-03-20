@@ -1,41 +1,37 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/pages/fonts/Montserrat-Regular.ttf");
+  src: url("../fonts/Montserrat-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/pages/fonts/Montserrat-BoldItalic.ttf");
+  src: url("../fonts/Montserrat-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic;
 }
 
-
 @font-face {
   font-family: "Montserrat";
-  src: url("/pages/fonts/Montserrat-Bold.ttf");
+  src: url("../fonts/Montserrat-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
-
 
 :root {
   --background: white;
   --color: black;
 }
 
-[data-theme='dark'] {
-  --background: #16161C;
+[data-theme="dark"] {
+  --background: #16161c;
   --color: white;
 }
 
 .loginform {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -51,7 +47,7 @@ body {
 
 body {
   background-color: var(--background);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 a {
@@ -65,15 +61,18 @@ a {
   }
 }
 
+.productSubmit {
+}
+
 .title {
   user-select: none;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-weight: bold;
   font-size: 25px;
 }
 
 .status {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .postButton {
@@ -94,10 +93,6 @@ a {
   margin-top: 5px;
 }
 
-
-
-
-
 .text {
   color: black;
 }
@@ -105,7 +100,7 @@ a {
 .header {
   color: var(--color);
   background-color: var(--background);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .fieldtext {
@@ -113,30 +108,60 @@ a {
   margin-bottom: 5px;
 }
 
-
 .input-feedback {
   color: red;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 
 .error {
   color: red;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 
 label {
   font-weight: bold;
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: black;
   margin-top: 20px;
+}
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.add-product-square {
+  border-style: dotted;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-product-square button {
+  padding: 10px;
+  background-color: none;
+}
+
+.product-card {
+  font-family: "Montserrat", serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
 }
 
 input {
   display: block;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -149,12 +174,11 @@ label {
   font-weight: normal;
   display: block;
   color: black;
-
 }
 
 .inputs {
   width: 80%;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,8 +187,6 @@ label {
   background-color: white;
   color: black;
 }
-
-
 
 .submitButton {
   background-color: #007eff;
@@ -197,16 +219,12 @@ label {
   border-radius: 10px;
 }
 
-
-
-
 .maintenance {
-
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-style: italic;
   min-height: 100vh;
@@ -218,11 +236,10 @@ label {
 .maintenance h1 {
   cursor: pointer;
   user-select: none;
-
 }
 
 .fourohfour {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   font-style: italic;
   font-size: 5vw;
@@ -241,11 +258,26 @@ label {
   font-size: 5.2854122621564485vw;
 }
 
+.adminMain {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 5vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
 .back {
   padding: 50px;
   font-size: 4vw;
 }
-
 
 .form {
   background-color: white;
@@ -261,10 +293,6 @@ label {
   justify-content: center;
 
   border-radius: 15px;
-
-
-
-
 }
 
 .toggleMaintenance {
@@ -274,11 +302,9 @@ label {
   align-items: center;
   text-align: center;
 
-
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
-
 
 .Collapsible__trigger {
   display: flex;
@@ -287,20 +313,16 @@ label {
   align-items: center;
   text-align: center;
 
-
-
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
 }
 
 .AdminLogin {
-
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   min-height: 100vh;
 }
@@ -311,7 +333,7 @@ label {
 }
 
 .AdminLogin h1 {
-  padding: 20px
+  padding: 20px;
 }
 
 .adminclick {
@@ -320,5 +342,4 @@ label {
 
 .adminpassword {
   -webkit-text-security: disc;
-
 }

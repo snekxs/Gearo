@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" elevation={0}>
         <Toolbar ref={ref} className={"header"}>
           <IconButton
             size="large"
@@ -32,7 +32,6 @@ export default function Header() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-
           </IconButton>
           <h1 className="title">Gearo</h1>
           <Typography
@@ -40,15 +39,13 @@ export default function Header() {
             variant="h6"
             component="div"
             sx={{ flexGrow: 1 }}
-          >
-
-          </Typography>
+          ></Typography>
 
           <Login />
           <ProductAdder />
           <ThemeChanger />
         </Toolbar>
       </AppBar>
-    </Box >
+    </Box>
   );
 }
