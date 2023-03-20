@@ -23,7 +23,7 @@ export default function Home({ data }) {
     fetchData();
   }, []);
 
-  if (maintenanceMode == false) {
+  if (maintenanceMode == true) {
     return (
       <>
         <Head>
@@ -34,7 +34,7 @@ export default function Home({ data }) {
         <Maintenance />
       </>
     );
-  } else if (maintenanceMode == true) {
+  } else if (maintenanceMode == false) {
     return (
       <>
         <Head>

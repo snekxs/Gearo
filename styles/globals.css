@@ -135,8 +135,19 @@ label {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.users-card {
+  font-family: "Montserrat", serif;
   padding: 10px;
+  text-align: center;
+}
+
+.users-card img {
+  max-width: 50%;
+  height: auto;
 }
 
 .add-product-square {

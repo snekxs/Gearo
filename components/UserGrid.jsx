@@ -18,7 +18,7 @@ export default function UserGrid() {
         {users
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((user) => (
-            <div className="product-card" key={user.id}>
+            <div className="users-card" key={user.id}>
               <img
                 src={user.image_url}
                 alt={user.name}
