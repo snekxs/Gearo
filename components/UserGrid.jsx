@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function UserGrid() {
   const [users, setUsers] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetch("/api/users")
@@ -14,8 +15,18 @@ export default function UserGrid() {
 
   return (
     <div>
+      <input
+        type="text"
+        className="admininput"
+        placeholder="Search users..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
       <div className="users-grid">
         {users
+          .filter((user) =>
+            user.name.toLowerCase().includes(searchQuery.toLowerCase())
+          )
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((user) => (
             <div className="users-card" key={user.id}>

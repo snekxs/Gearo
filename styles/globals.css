@@ -148,6 +148,16 @@ label {
 .users-card img {
   max-width: 50%;
   height: auto;
+  border-radius: 50%;
+}
+.admininput {
+  width: 75%;
+  height: 40%;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 4px;
 }
 
 .add-product-square {
