@@ -9,6 +9,7 @@ import { supabase } from "@/components/helpers/Supabase";
 import { StatusPage, StatusPageConfig } from "react-healthy";
 import Collapsible from "react-collapsible";
 import Switch from "@mui/material/Switch";
+import { useRouter } from "next/router";
 
 export default function Admin() {
   const [checked, setChecked] = useState(true);

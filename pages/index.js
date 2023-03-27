@@ -12,15 +12,30 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 export default function Home({ data }) {
   const [config, setConfig] = useState();
+  const [hasAccess, setAccess] = useState(false);
   const [maintenanceMode, setMaintenanceMode] = useState();
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(`/api/config`);
       const data = await res.json();
       setMaintenanceMode(data[0].maintenance);
     };
     fetchData();
+  }, []); */
+
+  useEffect(() => {
+    const access = sessionStorage.getItem("access");
+    if (access) {
+      setMaintenanceMode(false);
+    } else {
+      const fetchData = async () => {
+        const res = await fetch(`/api/config`);
+        const data = await res.json();
+        setMaintenanceMode(data[0].maintenance);
+      };
+      fetchData();
+    }
   }, []);
 
   if (maintenanceMode == true) {
