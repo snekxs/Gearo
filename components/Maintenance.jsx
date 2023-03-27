@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import { createClient } from "@supabase/supabase-js";
-
+import { useRouter } from "next/router";
 
 const supabaseUrl = "https://ridzyuyhihrriayeweqw.supabase.co";
 const supabaseKey =
@@ -12,7 +12,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default function Maintenance() {
   const [reveal, setReveal] = useState(false);
   const [text, setText] = useState(true);
-
+  const router = useRouter();
   const showText = () => {
     setText((text) => !text);
   };
@@ -22,30 +22,37 @@ export default function Maintenance() {
   };
 
   const submit = () => {
-    const key = document.getElementById("submit").value
-    supabase.from("adminpasswords").select("password").then((response) => {
+    const key = document.getElementById("submit").value;
+    supabase
+      .from("adminpasswords")
+      .select("password")
+      .then((response) => {
+        const data = response.data;
 
-      const data = response.data
-
-      if (data.some(item => item.password === key)) {
-        console.log("Valid")
-      } else {
-        alert("Invalid Credentials")
-      }
-    })
+        if (data.some((item) => item.password === key)) {
+          sessionStorage.setItem("access", "true");
+          router.reload(window.location.pathname);
+        } else {
+          alert("Invalid Credentials");
+        }
+      });
   };
 
   const back = () => {
-    setText((text) => !text)
-    setReveal((reveal) => !reveal)
-  }
+    setText((text) => !text);
+    setReveal((reveal) => !reveal);
+  };
 
   return (
     <div className="maintenance">
       {text && <h1 onClick={clickEvent}>Be Right Back.</h1>}
       {reveal && (
         <div className={"accessform"}>
-          <input id="submit" className="accessInput" placeholder={"Access Key"} />
+          <input
+            id="submit"
+            className="accessInput"
+            placeholder={"Access Key"}
+          />
           <Button onClick={back} color={"inherit"} sx={{ fontSize: 20 }}>
             Back
           </Button>
@@ -53,7 +60,6 @@ export default function Maintenance() {
           <Button onClick={submit} color={"inherit"} sx={{ fontSize: 20 }}>
             Enter
           </Button>
-
         </div>
       )}
     </div>

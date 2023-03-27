@@ -33,7 +33,10 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <h1 className="title">Gearo</h1>
+          <h1 class="title">
+            Gearo <span class="alpha">Alpha</span>
+          </h1>
+
           <Typography
             className="title"
             variant="h6"

@@ -2,6 +2,7 @@ import AdminHeader from "@/components/AdminHeader";
 import { useState, useEffect } from "react";
 import Switch from "@mui/material/Switch";
 import { supabase } from "@/components/helpers/Supabase";
+import Link from "next/link";
 
 export default function SiteSettings() {
   const [checked, setChecked] = useState(true);
@@ -61,7 +62,9 @@ export default function SiteSettings() {
   } else {
     return (
       <div className="unauthorized">
-        <h1>Unauthorized.</h1>
+        <Link href={"/admin"}>
+          <h1>Unauthorized.</h1>
+        </Link>
       </div>
     );
   }

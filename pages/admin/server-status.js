@@ -1,5 +1,7 @@
 import { StatusPage, StatusPageConfig } from "react-healthy";
 import AdminHeader from "@/components/AdminHeader";
+import Link from "next/link";
+
 import { useState, useEffect } from "react";
 const statusPageConfig = {
   apis: [
@@ -35,7 +37,9 @@ export default function ServerStatus() {
   } else {
     return (
       <div className="unauthorized">
-        <h1>Unauthorized.</h1>
+        <Link href={"/admin"}>
+          <h1>Unauthorized.</h1>
+        </Link>
       </div>
     );
   }

@@ -4,6 +4,8 @@ import IconButton from "@mui/material/IconButton";
 
 export default function ProductGrid() {
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
   useEffect(() => {
     fetch("/api/products")
       .then((response) => response.json())
@@ -20,6 +22,13 @@ export default function ProductGrid() {
 
   return (
     <div>
+      <input
+        type="text"
+        className="admininput"
+        placeholder="Search by brand or name..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
       <div className="product-grid">
         <div className="add-product-square">
           <IconButton onClick={handleAddProduct}>
@@ -27,6 +36,13 @@ export default function ProductGrid() {
           </IconButton>
         </div>
         {products
+          .filter(
+            (product) =>
+              product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              product.brand
+                .toLowerCase()
+                .includes(searchQuery.toLocaleLowerCase())
+          )
           .sort((a, b) => a.brand.localeCompare(b.brand))
           .map((product) => (
             <div className="product-card" key={product.id}>
