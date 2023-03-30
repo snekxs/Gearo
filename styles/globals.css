@@ -196,6 +196,24 @@ label {
   height: auto;
 }
 
+.HomePageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: minmax(
+    300px,
+    auto
+  ); /* sets a minimum height for the grid rows */
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.HomePageCard img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
 input {
   display: block;
   width: 100%;
@@ -396,4 +414,31 @@ label {
 
 .adminpassword {
   -webkit-text-security: disc;
+}
+
+.UserCard img {
+  margin-right: 1rem;
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.UserCard {
+  background-color: #0892d0;
+  color: white;
+  font-family: "Montserrat";
+  height: 25%;
+  border-radius: 0 0 45px 45px;
+  padding: 20px;
+  user-select: none;
+}
+.userStatus {
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  color: black;
+  border-radius: 25px;
+  font-size: 15px;
+  user-select: none;
 }

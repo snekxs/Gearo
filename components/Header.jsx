@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeChanger from "./ThemeChanger";
 import ProductAdder from "./ProductAdder";
+import Link from "next/link";
 import Login from "./Login";
 const ref = React.createRef();
 
@@ -33,9 +34,11 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <h1 class="title">
-            Gearo <span class="alpha">Alpha</span>
-          </h1>
+          <Link href="/">
+            <h1 className="title">
+              Gearo <span className="alpha">Alpha</span>
+            </h1>
+          </Link>
 
           <Typography
             className="title"

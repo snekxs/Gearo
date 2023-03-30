@@ -8,6 +8,7 @@ import HomePageContent from "@/components/HomePageContent";
 import ThemeChanger from "@/components/ThemeChanger";
 import Maintenance from "@/components/Maintenance";
 import { useState, useEffect } from "react";
+import HomePageGrid from "@/components/HomePageGrid";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home({ data }) {
@@ -59,7 +60,7 @@ export default function Home({ data }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
-        <HomePageContent />
+        <HomePageGrid />
       </>
     );
   }
