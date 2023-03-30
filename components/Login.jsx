@@ -40,7 +40,7 @@ export default function Login() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 400,
-    height: 350,
+    height: 375,
     bgcolor: "background.paper",
     color: "black",
     borderRadius: 5,
@@ -64,9 +64,9 @@ export default function Login() {
     handleOpenRegister();
   };
 
-  const submitRegister = () => { };
+  const submitRegister = () => {};
 
-  const submitLogin = () => { };
+  const submitLogin = () => {};
 
   return (
     <>
@@ -127,6 +127,7 @@ export default function Login() {
                   name="password"
                   placeholder="Password"
                 />
+
                 <Button className="submit" sx={buttonSX} type="submit">
                   Register
                 </Button>
