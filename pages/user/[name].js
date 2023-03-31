@@ -5,33 +5,11 @@ import React, { useEffect } from "react";
 import ColorThief from "colorthief";
 import { useState, createRef, useRef } from "react";
 
-export default function UserPage(name) {
+export default function UserPage({ users }) {
   const [data, setData] = useState();
   const [error, setError] = useState(false);
   const [imageData, setImageData] = useState(null);
   const userCardRef = useRef(null);
-
-  useEffect(() => {
-    fetch(`/api/user/${name.name}`, { timeout: 10000 })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("User not found");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        if (error.name === "AbortError") {
-          console.log("Request timed out");
-        } else {
-          console.error(error);
-          setError(true);
-          // Handle other errors appropriately
-        }
-      });
-  }, []);
 
   function createdDays(dateString) {
     const diffTime = Math.abs(new Date() - new Date(dateString));
@@ -60,7 +38,7 @@ export default function UserPage(name) {
     return (
       <div>
         <Header />
-        {data?.map((user) => (
+        {users?.map((user) => (
           <div className="UserCard" key={user.id} ref={userCardRef}>
             <img src={user.image_url} />
             <h1>{user.name}</h1>
@@ -76,5 +54,12 @@ export default function UserPage(name) {
 export async function getServerSideProps(context) {
   const { name } = context.query;
 
-  return { props: { name } };
+  try {
+    const res = await fetch(`https://gearo.ca/api/user/${name}`);
+    const users = await res.json();
+
+    return { props: { users } };
+  } catch (error) {
+    return { props: { error: true } };
+  }
 }
