@@ -437,8 +437,14 @@ label {
   display: inline-block;
   background-color: white;
   padding: 5px;
+  margin-top: 20px;
+
   color: black;
   border-radius: 25px;
-  font-size: 15px;
+  font-size: 10px;
   user-select: none;
+}
+
+.UserCreated {
+  font-size: 20px;
 }
