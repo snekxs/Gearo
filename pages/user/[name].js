@@ -1,9 +1,14 @@
 import Header from "@/components/Header";
-import { DataSaverOff, ErrorRounded } from "@mui/icons-material";
+import {
+  CompassCalibrationSharp,
+  DataSaverOff,
+  ErrorRounded,
+} from "@mui/icons-material";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import ColorThief from "colorthief";
 import { useState, createRef, useRef } from "react";
+import supabase from "@/components/helpers/Supabase";
 
 export default function UserPage({ users }) {
   const [data, setData] = useState();
@@ -53,12 +58,18 @@ export default function UserPage({ users }) {
 
 export async function getServerSideProps(context) {
   const { name } = context.query;
-
+  console.log(name);
   try {
-    const res = await fetch(`https://gearo.ca/api/user/${name}`);
-    const users = await res.json();
+    await supabase
+      .from("users")
+      .select("*")
+      .eq("name", name)
+      .then((response) => {
+        const users = response.users;
+        return { props: { users } };
+      });
 
-    return { props: { users } };
+    if (error) throw error;
   } catch (error) {
     return { props: { error: true } };
   }
