@@ -26,9 +26,9 @@ export default function HomePageGrid() {
     width: "75%",
     height: "75%",
     bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
+    borderRadius: 20,
+    outline: "none",
+    //boxShadow: 24,
   };
 
   function handleModalOpen(index) {
