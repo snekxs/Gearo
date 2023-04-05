@@ -1,9 +1,4 @@
 import Header from "@/components/Header";
-import {
-  CompassCalibrationSharp,
-  DataSaverOff,
-  ErrorRounded,
-} from "@mui/icons-material";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import ColorThief from "colorthief";
