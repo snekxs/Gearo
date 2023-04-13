@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import ColorThief from "colorthief";
 import { useState, createRef, useRef } from "react";
+import { supabase } from "@/components/helpers/Supabase";
 
 export default function UserPage(name) {
   const [data, setData] = useState();
@@ -12,21 +13,16 @@ export default function UserPage(name) {
   const imgRef = useRef();
 
   useEffect(() => {
-    fetch(`/api/user/${name.name}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("User not found");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.error(error);
-        setError(true);
-        // Handle the error appropriately (e.g. show an error message to the user)
-      });
+    async function fetchData() {
+      await supabase
+        .from("users")
+        .select("*")
+        .eq("name", name.name)
+        .then((response) => {
+          setData(response.data);
+        });
+    }
+    fetchData();
   }, []);
 
   if (error) {
