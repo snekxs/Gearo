@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
+import toast, { Toaster } from "react-hot-toast";
 
 const supabaseUrl = "https://ridzyuyhihrriayeweqw.supabase.co";
 const supabaseKey =
@@ -33,7 +34,7 @@ export default function Maintenance() {
           sessionStorage.setItem("access", "true");
           router.reload(window.location.pathname);
         } else {
-          alert("Invalid Credentials");
+          toast.error("Invalid Credentials");
         }
       });
   };
@@ -44,24 +45,27 @@ export default function Maintenance() {
   };
 
   return (
-    <div className="maintenance">
-      {text && <h1 onClick={clickEvent}>Be Right Back.</h1>}
-      {reveal && (
-        <div className={"accessform"}>
-          <input
-            id="submit"
-            className="accessInput"
-            placeholder={"Access Key"}
-          />
-          <Button onClick={back} color={"inherit"} sx={{ fontSize: 20 }}>
-            Back
-          </Button>
+    <>
+      <Toaster containerClassName="toast" position="bottom-right" />
+      <div className="maintenance">
+        {text && <h1 onClick={clickEvent}>Be Right Back.</h1>}
+        {reveal && (
+          <div className={"accessform"}>
+            <input
+              id="submit"
+              className="accessInput"
+              placeholder={"Access Key"}
+            />
+            <Button onClick={back} color={"inherit"} sx={{ fontSize: 20 }}>
+              Back
+            </Button>
 
-          <Button onClick={submit} color={"inherit"} sx={{ fontSize: 20 }}>
-            Enter
-          </Button>
-        </div>
-      )}
-    </div>
+            <Button onClick={submit} color={"inherit"} sx={{ fontSize: 20 }}>
+              Enter
+            </Button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }

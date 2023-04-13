@@ -5,6 +5,8 @@ import { createClient } from "@supabase/supabase-js";
 import AdminHeader from "@/components/AdminHeader";
 import TemporaryDrawer from "@/components/TemporaryDrawer";
 import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
 import { supabase } from "@/components/helpers/Supabase";
 import { StatusPage, StatusPageConfig } from "react-healthy";
 import Collapsible from "react-collapsible";
@@ -84,7 +86,7 @@ export default function Admin() {
           sessionStorage.setItem("logged", "true");
           setLogged(true);
         } else {
-          alert("Invalid Credentials");
+          toast.error("Invalid Credentials");
         }
       });
   };
@@ -92,6 +94,9 @@ export default function Admin() {
   if (logged) {
     return (
       <>
+        <div>
+          <Toaster position="bottom-center" />
+        </div>
         <AdminHeader />
         <div className="adminMain">
           <h1>Welcome.</h1>
@@ -101,6 +106,9 @@ export default function Admin() {
   } else {
     return (
       <>
+        <div>
+          <Toaster containerClassName="toast" position="bottom-right" />
+        </div>
         <div className="AdminLogin">
           <h1>Admin Login</h1>
           <input id="username" placeholder="Username" />

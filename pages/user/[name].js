@@ -1,28 +1,43 @@
 import Header from "@/components/Header";
-import { ErrorRounded } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import ColorThief from "colorthief";
 import { useState, createRef, useRef } from "react";
-import { supabase } from "@/components/helpers/Supabase";
+import supabase from "@/components/helpers/Supabase";
 
-export default function UserPage(name) {
+export default function UserPage({ users }) {
   const [data, setData] = useState();
   const [error, setError] = useState(false);
   const [imageData, setImageData] = useState(null);
-  const imgRef = useRef();
+  const userCardRef = useRef(null);
+
+  function createdDays(dateString) {
+    const diffTime = Math.abs(new Date() - new Date(dateString));
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    return diffDays === 0
+      ? "Created today"
+      : diffDays === 1
+      ? "Created yesterday"
+      : `Created ${diffDays} days ago`;
+  }
 
   useEffect(() => {
-    async function fetchData() {
-      await supabase
-        .from("users")
-        .select("*")
-        .eq("name", name.name)
-        .then((response) => {
-          setData(response.data);
-        });
-    }
-    fetchData();
+    fetch(`/api/user/${name.name}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("User not found");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(true);
+        // Handle the error appropriately (e.g. show an error message to the user)
+      });
   }, []);
 
   if (error) {
@@ -31,14 +46,12 @@ export default function UserPage(name) {
     return (
       <div>
         <Header />
-        {data?.map((user) => (
-          <div className="UserCard" key={user.id}>
+        {users?.map((user) => (
+          <div className="UserCard" key={user.id} ref={userCardRef}>
             <img src={user.image_url} />
             <h1>{user.name}</h1>
-            <h1>Created Yesterday</h1>
-            <div className="userStatus">
-              <h1>Online</h1>
-            </div>
+            <h1 className="UserCreated">{createdDays(user.created_at)}</h1>
+            {status(user.online)}
           </div>
         ))}
       </div>
@@ -48,6 +61,19 @@ export default function UserPage(name) {
 
 export async function getServerSideProps(context) {
   const { name } = context.query;
+  console.log(name);
+  try {
+    await supabase
+      .from("users")
+      .select("*")
+      .eq("name", name)
+      .then((response) => {
+        const users = response.users;
+        return { props: { users } };
+      });
 
-  return { props: { name } };
+    if (error) throw error;
+  } catch (error) {
+    return { props: { error: true } };
+  }
 }

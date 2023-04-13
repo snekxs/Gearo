@@ -4,7 +4,6 @@ import { Montserrat } from "@next/font/google";
 import { createClient } from "@supabase/supabase-js";
 import Header from "@/components/Header";
 import * as React from "react";
-import HomePageContent from "@/components/HomePageContent";
 import ThemeChanger from "@/components/ThemeChanger";
 import Maintenance from "@/components/Maintenance";
 import { useState, useEffect } from "react";
